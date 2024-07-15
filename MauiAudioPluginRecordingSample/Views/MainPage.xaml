@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAudioPluginRecordingSample.MainPage"
+             Title="Grabación de Audio">
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Lista de Audios" Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ScrollView>
+        <VerticalStackLayout Padding="20">
+            <Button
+                x:Name="StartRecordingButton"
+                Text="Start Recording"
+                Clicked="OnStartRecordingClicked"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="StopRecordingButton"
+                Text="Stop Recording"
+                IsVisible="False"
+                Clicked="OnStopRecordingClicked"
+                HorizontalOptions="Center" />
+
+            <!-- ListView para mostrar los audios guardados -->
+            <!--<ListView
+                x:Name="AudioListView"
+                IsVisible="False"
+                ItemSelected="OnAudioSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding FileName}" Detail="{Binding FilePath}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>-->
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
