@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiAudioPluginRecordingSample.Views.PageList"
              xmlns:conver="clr-namespace:MauiAudioPluginRecordingSample.Config"
-             Title="Lista de Audios">
+             Title="AUDIOS"
+             Background="White">
     <ScrollView>
         <VerticalStackLayout Padding="20">
             <CollectionView x:Name="listaudio" SelectionMode="Single">

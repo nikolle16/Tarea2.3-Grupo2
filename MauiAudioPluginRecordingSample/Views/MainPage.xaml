@@ -2,24 +2,62 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiAudioPluginRecordingSample.MainPage"
-             Title="Grabación de Audio">
+             Title="GRABADORA"
+             Background="White">
     
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Lista de Audios" Clicked="ToolbarItem_Clicked"/>
-    </ContentPage.ToolbarItems>
     <ScrollView>
         <VerticalStackLayout Padding="20">
+
+            <Image
+                Source="micro.png"
+                Margin="0,100,0,0"
+                HeightRequest="185"
+                Aspect="AspectFit" />
+
             <Button
                 x:Name="StartRecordingButton"
-                Text="Start Recording"
+                Margin="0,30,0,0"
+                WidthRequest="200"
+                HeightRequest="50"
+                Background="#2b0098"
+                TextColor="White" 
+                Text="Grabar"
+                FontSize="18"
+                BorderColor="Black"
+                BorderWidth="2"
+                FontAttributes="Bold"
                 Clicked="OnStartRecordingClicked"
                 HorizontalOptions="Center" />
 
             <Button
                 x:Name="StopRecordingButton"
-                Text="Stop Recording"
+                Margin="0,30,0,0"
+                WidthRequest="200"
+                HeightRequest="50"
+                Background="#2b0098"
+                TextColor="White" 
+                Text="Detener"
+                FontSize="18"
+                BorderColor="Black"
+                BorderWidth="2"
+                FontAttributes="Bold"
                 IsVisible="False"
                 Clicked="OnStopRecordingClicked"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="Lista"
+                Background="#2b0098" 
+                WidthRequest="200"
+                HeightRequest="50"
+                Margin="0,30,0,0"
+                Text="Lista de Audios"
+                FontSize="18"
+                BorderColor="Black"
+                BorderWidth="2"
+                TextColor="White"
+                FontAttributes="Bold"
+                Clicked="ToolbarItem_Clicked"
                 HorizontalOptions="Center" />
 
             <!-- ListView para mostrar los audios guardados -->
